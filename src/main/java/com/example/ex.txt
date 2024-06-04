@@ -1,0 +1,16 @@
+SPECIFIC METHODS
+
+Files.createSymbolicLink
+Create a symbolic link from one path to another.
+
+Files.createLink
+Create a hard link from one path to another.
+
+Files.probeContentType
+Determine and print the MIME type of a specified file.
+
+Files.isSymbolicLink
+Check if a specified path is a symbolic link and return a boolean.
+
+Files.getFileStore
+Retrieve and print the file store attributes for a specified path.
