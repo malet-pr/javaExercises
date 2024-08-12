@@ -243,14 +243,12 @@ public class ConcurrencyAsyncExercises {
             @JsonIgnore
             private List<News> subnews;
        }
-      static String rapidApi1 = "4fcb769679mshb913d570be71cfcp18ff51jsn2e980a860b74";
-      static String rapidApi2 = "be78279f3amsh1d2fda7f171ca2dp18a48ejsn990e9b3e1f62";
-      static String rapidApi3 = "e37c974bd0msh35f2d4aaf4098d5p1a246ejsn5c72cb6a913c";
+      static String rapidApi = "...";
       private static Map<String,List<String>> getGoogleNews(List<String> newsOutlets) throws IOException, InterruptedException {
           Map<String,List<String>> newsHeadlines = new HashMap<String,List<String>>();
           HttpRequest request = HttpRequest.newBuilder()
                   .uri(URI.create("https://google-news13.p.rapidapi.com/technology?lr=en-US"))
-                  .header("x-rapidapi-key", rapidApi2)
+                  .header("x-rapidapi-key", rapidApi)
                   .header("x-rapidapi-host", "google-news13.p.rapidapi.com")
                   .method("GET", HttpRequest.BodyPublishers.noBody())
                   .build();
