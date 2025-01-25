@@ -1,11 +1,9 @@
 package com.example;
 
 import lombok.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.random.RandomGenerator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -73,7 +71,7 @@ public class Java11To17 {
     }
     */
     public static String dayOfWeek(int day){
-        String dayOfWeek = "";
+        String dayOfWeek;
         switch(day){
             case 1 -> dayOfWeek = "Monday";
             case 2 -> dayOfWeek = "Tuesday";
@@ -82,7 +80,7 @@ public class Java11To17 {
             case 5 -> dayOfWeek = "Friday";
             case 6 -> dayOfWeek = "Saturday";
             case 7 -> dayOfWeek = "Sunday";
-            default -> dayOfWeek = "wrong number";
+            default -> dayOfWeek = "Invalid day";
         }
         return dayOfWeek;
     }
@@ -171,14 +169,12 @@ public class Java11To17 {
     Use the LocalDate and LocalDateTime classes to parse, format, and manipulate dates and times.
     Ensure you use the new methods introduced up to Java 17 if applicable.
     */
-
-
+    // In another exercise
     /*
     Exercise 10: Instant and OffsetDateTime
     Convert an Instant to an OffsetDateTime using the atOffset method and print the result.
     */
-
-
+    // In another exercise
     /*
     Exercise 11: Enhanced Random Methods
     Use the new methods in the Random class, such as doubles(), ints(), and longs(), to generate streams of
@@ -198,22 +194,36 @@ public class Java11To17 {
     // Not now (it's a preview of java 22)
 
     public static void main(String[] args) {
-        /*
-        //patternMatchingInstance("Hello World");
-        //System.out.println(html);
-        //System.out.println(STR."The day of the week is \{dayOfWeek(2)}");
-        //List<Person> persons = Arrays.asList(new Person("juan",23), new Person("maria",22), new Person("gabriel",25));
-        //persons.forEach(System.out::println);
-        //Person p1 = persons.stream().filter(p -> p.name().equalsIgnoreCase("maria")).findFirst().get();
-        //Person p2 = new Person("juan",23);
-        //System.out.println(STR."p1 is \{p1.toString()}");
-        //System.out.println(STR."p1 and p2 are the same person? \{p1.equals(p2)}");
-        //Stream<Integer> numbers = Stream.of(1, 2, 3, 4, 5);
-        //List<Integer> numberList = numbers.toList();
-        //NullPointerClass npc = NullPointerClass.builder().id(1L).name("example").build();
-        //System.out.println(npc.toString());
-        */
-        /*
+        System.out.println("\nExercise 1: ");
+        patternMatchingInstance("Hello World");
+
+        System.out.println("\nExercise 2: ");
+        System.out.println(html);
+
+        System.out.println("\nExercise 3: ");
+        System.out.println(STR."The day of the week is \{dayOfWeek(2)}");
+
+        System.out.println("\nExercise 5: ");
+        List<Person> persons = Arrays.asList(
+                new Person("juan",23),
+                new Person("maria",22),
+                new Person("gabriel",25)
+        );
+        persons.forEach(System.out::println);
+        Person p1 = persons.stream().filter(p -> p.name().equalsIgnoreCase("maria")).findFirst().get();
+        Person p2 = new Person("juan",23);
+        System.out.println(STR."p1 is \{p1.toString()}");
+        System.out.println(STR."p1 and p2 are the same person? \{p1.equals(p2)}");
+
+        System.out.println("\nExercise 6: ");
+        Stream<Integer> numbers = Stream.of(1, 2, 3, 4, 5);
+        List<Integer> numberList = numbers.toList();
+
+        System.out.println("\nExercise 7: ");
+        NullPointerClass npc = NullPointerClass.builder().id(1L).name("example").build();
+        System.out.println(npc.toString());
+
+        System.out.println("\nExercise 8: ");
         Circle circle = new Circle();
         circle.setRadius(10);
         circle.setColor("red");
@@ -230,8 +240,8 @@ public class Java11To17 {
         square.setColor("green");
         System.out.println(square);
         System.out.println(STR."Square area = \{square.getArea()}");
-        */
-        /*
+
+        System.out.println("\nExercise 11: ");
         Random random = new Random();
         Stream<Integer> ints = random.ints(1, 10).boxed();
         Stream<Long> longs = random.longs(100, 10000).boxed();
@@ -239,8 +249,6 @@ public class Java11To17 {
         System.out.println(ints.limit(20).map(Object::toString).collect(Collectors.joining("-", " ", " ")));
         System.out.println(longs.limit(20).map(Object::toString).collect(Collectors.joining("-", " ", " ")));
         System.out.println(doubles.limit(20).map(Object::toString).collect(Collectors.joining("-", " ", " ")));
-        */
-
 
     }
 }

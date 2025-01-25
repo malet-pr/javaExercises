@@ -10,6 +10,8 @@ import java.util.TimeZone;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+import static java.lang.StringTemplate.STR;
+
 public class DateTimeExercises {
 
     // JAVA 9
